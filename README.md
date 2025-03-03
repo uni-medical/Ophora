@@ -7,9 +7,20 @@
 
 This repository is for our work submitted to MICCAI25, titled "Ophora: A Large-Scale Data-Driven Text-Guided Ophthalmic Surgical Video Generation Model".
 
-We have released the inference code of Ophora. The training code and model checkpoint will be released after the review process.
+We have released the training and inference codes of Ophora. The model checkpoint will be released after the review process.
 
 ![Framework](./ophora.png)
+
+## To prepare dataset
+```bash
+bash prepare_dataset.sh
+```
+
+## Train
+```bash
+bash TPT.sh
+bash P2FT.sh
+```
 
 ## Inference
 ```bash
