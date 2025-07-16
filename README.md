@@ -12,37 +12,15 @@ We have released the training and inference codes of Ophora. The model checkpoin
 ![Framework](./ophora.png)
 
 ## Synthesized Videos
-<div class="video-container" style="display: flex; flex-wrap: wrap; gap: 20px;">
 
-  <div class="video-item" style="flex: 1 1 45%;">
-    <video width="100%" controls>
-      <source src="./demo/Anterio-Chamber-Flushing.mp4" type="video/mp4">
-    </video>
-    <div class="caption">Anterio Chamber Flushing: Simulated procedure demonstrating anterior chamber irrigation during ophthalmic surgery.</div>
-  </div>
+| ![Anterio Chamber Flushing](./demo/Anterio-Chamber-Flushing.gif) | ![Capsule Polishing](./demo/Capsule-Pulishing.gif) |
+|:----------------------------------------------------------------:|:--------------------------------------------------:|
+| *Anterio Chamber Flushing: Simulated procedure demonstrating anterior chamber irrigation during ophthalmic surgery.* | *Capsule Polishing: Synthesized video showing delicate capsule polishing with micro-instruments.* |
 
-  <div class="video-item" style="flex: 1 1 45%;">
-    <video width="100%" controls>
-      <source src="./demo/Capsule-Pulishing.mp4" type="video/mp4">
-    </video>
-    <div class="caption">Capsule Polishing: Synthesized video showing delicate capsule polishing with micro-instruments.</div>
-  </div>
+| ![Hydrodissection](./demo/hydrodissection.gif) | ![Lens Implantation](./demo/Lens-Implantation.gif) |
+|:----------------------------------------------:|:--------------------------------------------------:|
+| *Hydrodissection: Text-guided video generation of hydrodissection phase during cataract surgery.* | *Lens Implantation: Generated video illustrating lens implantation following cataract extraction.* |
 
-  <div class="video-item" style="flex: 1 1 45%;">
-    <video width="100%" controls>
-      <source src="./demo/hydrodissection.mp4" type="video/mp4">
-    </video>
-    <div class="caption">Hydrodissection: Text-guided video generation of hydrodissection phase during cataract surgery.</div>
-  </div>
-
-  <div class="video-item" style="flex: 1 1 45%;">
-    <video width="100%" controls>
-      <source src="./demo/Lens-Implantation.mp4" type="video/mp4">
-    </video>
-    <div class="caption">Lens Implantation: Generated video illustrating lens implantation following cataract extraction.</div>
-  </div>
-
-</div>
 
 ## Ophora & Ophora-160K
 ### Model Checkpoint
