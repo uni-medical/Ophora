@@ -7,24 +7,88 @@
 
 This repository is for our work submitted to MICCAI25, titled "Ophora: A Large-Scale Data-Driven Text-Guided Ophthalmic Surgical Video Generation Model".
 
-We have released the training and inference codes of Ophora. The model checkpoint will be released after the review process.
+We have released the training and inference codes of Ophora. The model checkpoint and dataset are released.
 
 ![Framework](./ophora.png)
 
-## To prepare dataset
+## Synthesized Videos
+<div class="video-container" style="display: flex; flex-wrap: wrap; gap: 20px;">
+
+  <div class="video-item" style="flex: 1 1 45%;">
+    <video width="100%" controls>
+      <source src="./demo/Anterio-Chamber-Flushing.mp4" type="video/mp4">
+    </video>
+    <div class="caption">Anterio Chamber Flushing: Simulated procedure demonstrating anterior chamber irrigation during ophthalmic surgery.</div>
+  </div>
+
+  <div class="video-item" style="flex: 1 1 45%;">
+    <video width="100%" controls>
+      <source src="./demo/Capsule-Pulishing.mp4" type="video/mp4">
+    </video>
+    <div class="caption">Capsule Polishing: Synthesized video showing delicate capsule polishing with micro-instruments.</div>
+  </div>
+
+  <div class="video-item" style="flex: 1 1 45%;">
+    <video width="100%" controls>
+      <source src="./demo/hydrodissection.mp4" type="video/mp4">
+    </video>
+    <div class="caption">Hydrodissection: Text-guided video generation of hydrodissection phase during cataract surgery.</div>
+  </div>
+
+  <div class="video-item" style="flex: 1 1 45%;">
+    <video width="100%" controls>
+      <source src="./demo/Lens-Implantation.mp4" type="video/mp4">
+    </video>
+    <div class="caption">Lens Implantation: Generated video illustrating lens implantation following cataract extraction.</div>
+  </div>
+
+</div>
+
+## Ophora & Ophora-160K
+### Model Checkpoint
+We provide model checkpoints for Ophora at the [Ophora repository](https://huggingface.co/General-Medical-AI/Ophora).
+
+### Dataset
+The curated large-scale dataset **Ophora-160K** can be accessed at [Ophora-160K datasets](https://huggingface.co/datasets/General-Medical-AI/Ophora-160K).
+
+
+## Prepare Environment
+
+Training and inference with Ophora require an environment compatible with the CogVideoX-2b model.  
+Please refer to its official page for installation instructions and dependencies: [CogVideoX-2b on Hugging Face](https://huggingface.co/THUDM/CogVideoX-2b).
+
+
+
+## To prepare dataset for model training
 ```bash
 bash prepare_dataset.sh
 ```
 
 ## Train
+Transfer Pre-Training
 ```bash
 bash TPT.sh
+```
+Privacy-Preserving Fine-tuning
+```bash
 bash P2FT.sh
 ```
 
 ## Inference
+
+We provide phase captions written by professional ophthalmologists based on the phase labels in the [Cataract-1K](https://github.com/Negin-Ghamsarian/Cataract-1K) dataset.  
+You can use the `Cataract-1K-phase_prompts.csv` file for inference.
+
 ```bash
 bash sample.sh
 ```
 
+## Citation
 
+```bibtex
+@article{li2025ophora,
+  title={Ophora: A large-scale data-driven text-guided ophthalmic surgical video generation model},
+  author={Li, Wei and Hu, Ming and Wang, Guoan and Liu, Lihao and Zhou, Kaijin and Ning, Junzhi and Guo, Xin and Ge, Zongyuan and Gu, Lixu and He, Junjun},
+  journal={arXiv preprint arXiv:2505.07449},
+  year={2025}
+}
